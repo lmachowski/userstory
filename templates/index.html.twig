@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container main-container">
+        <h2>Welcome in user story service !</h2>
+
+        {% if app.user %}
+            <div class="mb-3">
+                You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+            </div>
+        {% endif %}
+
+        {% if not app.user %}
+            <div class="mb-3">
+                Do you have a account ? <a href="{{ path('app_login') }}">Sign in</a>
+            </div>
+        {% endif %}
+
+        {% if not app.user %}
+            <div class="mb-3">
+                or <a href="{{ path('app_register') }}"> Sign up</a>
+            </div>
+        {% endif %}
+
+    </div>
+{% endblock %}
+

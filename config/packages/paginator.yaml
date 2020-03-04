@@ -1,0 +1,7 @@
+knp_paginator:
+  page_range: 10 # liczba linków w numeracji stron
+  default_options:
+    page_name: page # nazwa zmiennej w adresie Url, np: ?page=1
+    distinct: true
+  template:
+    pagination: '@KnpPaginator/Pagination/sliding.html.twig'
